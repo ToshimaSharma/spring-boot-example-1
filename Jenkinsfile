@@ -1,68 +1,28 @@
-pipeline{
+pipeline { 
+  
+   agent any
 
-    agent any
-
-    tools { 
-
-        maven 'maven3'
-
-    }
-
-    stages
-
-       {
-
-            stage("clean")
-
-            {
-
-                steps{
-
-                    sh "mvn clean"
-
-                }
-
-            }
-
-            stage("Build")
-
-            {
-
-                steps{
-
-                    sh "mvn compile"
-
-                }
-
-                
-
-            }
-
-            stage("TEST")
-
-            {
-
-                steps{
-
-                    sh "mvn test"
-
-                }
-
-            }
-
-            stage("package")
-
-            {
-
-                steps{
-
-                    sh "mvn package"
-
-                }
-
-            }
+   stages {
+   
+     stage('Install Dependencies') { 
+        steps { 
+           sh 'npm install' 
         }
+     }
+     
+     stage('Test') { 
+        steps { 
+           sh 'echo "testing application..."'
+        }
+      }
 
- 
+         stage("Deploy application") { 
+         steps { 
+           sh 'echo "deploying application..."'
+         }
 
-}
+     }
+  
+   	}
+
+   }
