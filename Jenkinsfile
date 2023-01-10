@@ -4,7 +4,7 @@ pipeline{
 
     tools { 
 
-        maven 'maven3'
+        maven 'Maven'
 
     }
 
@@ -65,5 +65,7 @@ pipeline{
         
 
     }
+
+}
 
  
