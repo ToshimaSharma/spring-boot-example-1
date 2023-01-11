@@ -1,6 +1,6 @@
 # hello-spring
 
-triggering the event for the first time.
+
 This is a simple "Hello World!" web app using the Spring Boot java framework:
 [http://spring.io](http://spring.io).
 
