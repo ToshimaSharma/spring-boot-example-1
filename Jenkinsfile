@@ -45,7 +45,7 @@ pipeline {
             }
 
             failure{
-                emailext to: "akash.kumar@knoldus.com",
+                emailext to: "toshima.sharma@knoldus.com",
                 subject: "Test Email Failure",
                 body: "Test Failure"
             }
